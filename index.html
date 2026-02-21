@@ -1,0 +1,533 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>中央区マンジャロ オンラインクリニック｜マンジャロ2.5mg 3,500円〜（税込）｜全国配送</title>
+<meta name="description" content="中央区マンジャロ オンラインクリニック。マンジャロ（Mounjaro）2.5mg：初回3,500円（税込）、通常4,000円（税込）。完全オンライン診療、全国配送（送料1,300円）。" />
+<style>
+:root{
+--bg:#0b1220;
+--card:#0f1a33;
+--soft:#132145;
+--text:#eaf0ff;
+--muted:#b7c3e6;
+--accent:#7aa7ff;
+--accent2:#57e3c6;
+--danger:#ff6b6b;
+--border:rgba(255,255,255,.10);
+--shadow: 0 10px 30px rgba(0,0,0,.35);
+--radius:18px;
+--radius2:26px;
+--max: 1080px;
+--pad: 22px;
+font-synthesis-weight:none;
+text-rendering:optimizeLegibility;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+background: radial-gradient(1200px 700px at 20% 0%, rgba(122,167,255,.20), transparent 60%),
+radial-gradient(900px 500px at 80% 20%, rgba(87,227,198,.15), transparent 55%),
+var(--bg);
+color: var(--text);
+line-height:1.7;
+}
+a{color:inherit}
+.wrap{max-width:var(--max); margin:0 auto; padding: 0 18px;}
+.nav{
+position:sticky; top:0; z-index:10;
+backdrop-filter: blur(10px);
+background: rgba(11,18,32,.65);
+border-bottom:1px solid var(--border);
+}
+.navin{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0;}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
+.logo{
+width:40px; height:40px; border-radius:14px;
+background: linear-gradient(135deg, var(--accent), var(--accent2));
+box-shadow: 0 8px 20px rgba(122,167,255,.25);
+}
+.brand strong{font-size:14px; display:block; line-height:1.15}
+.brand span{font-size:12px; color:var(--muted)}
+.navbtns{display:flex; gap:10px; align-items:center;}
+.btn{
+display:inline-flex; align-items:center; justify-content:center; gap:10px;
+padding: 12px 14px;
+border-radius: 14px;
+border:1px solid var(--border);
+text-decoration:none;
+background: rgba(255,255,255,.06);
+color: var(--text);
+font-weight:700;
+letter-spacing:.02em;
+box-shadow: none;
+transition: transform .08s ease, background .2s ease, border-color .2s ease;
+white-space:nowrap;
+}
+.btn:hover{background: rgba(255,255,255,.10); transform: translateY(-1px); border-color: rgba(255,255,255,.18);}
+.btn.primary{
+background: linear-gradient(135deg, var(--accent), var(--accent2));
+border-color: transparent;
+color:#071022;
+box-shadow: 0 12px 30px rgba(87,227,198,.18);
+}
+.btn.primary:hover{transform: translateY(-1px); filter:saturate(1.02);}
+header.hero{padding: 34px 0 18px;}
+.heroGrid{
+display:grid;
+grid-template-columns: 1.15fr .85fr;
+gap:18px;
+align-items:stretch;
+}
+.heroCard{
+background: linear-gradient(180deg, rgba(15,26,51,.95), rgba(15,26,51,.72));
+border:1px solid var(--border);
+border-radius: var(--radius2);
+box-shadow: var(--shadow);
+padding: 26px;
+overflow:hidden;
+position:relative;
+}
+.badge{
+display:inline-flex; align-items:center; gap:8px;
+padding: 7px 10px;
+border-radius: 999px;
+border:1px solid rgba(255,255,255,.14);
+background: rgba(255,255,255,.06);
+color: var(--muted);
+font-weight:700;
+font-size:12px;
+margin-bottom: 10px;
+}
+h1{margin: 0 0 10px; font-size: 34px; line-height:1.18;}
+.lead{color: var(--muted); margin: 0 0 16px; font-size: 15px;}
+.priceRow{
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap:12px;
+margin: 14px 0 18px;
+}
+.priceBox{
+border:1px solid rgba(255,255,255,.14);
+background: rgba(255,255,255,.05);
+border-radius: 18px;
+padding: 14px;
+}
+.priceBox small{display:block; color: var(--muted); font-weight:700;}
+.priceBox b{display:block; font-size: 24px; margin-top:4px;}
+.priceBox .note{font-size:12px; color: var(--muted); margin-top:4px;}
+.kpis{display:flex; flex-wrap:wrap; gap:10px; margin-top: 8px;}
+.kpi{
+padding: 10px 12px;
+border-radius: 14px;
+border:1px solid rgba(255,255,255,.14);
+background: rgba(255,255,255,.05);
+color: var(--muted);
+font-size:12px;
+font-weight:700;
+}
+.sideCard h2{margin: 0 0 12px; font-size: 16px;}
+.list{margin:0; padding-left: 18px; color: var(--muted);}
+.list li{margin: 6px 0;}
+section{padding: 18px 0;}
+.grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px;}
+.grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px;}
+.card{
+background: rgba(15,26,51,.72);
+border:1px solid var(--border);
+border-radius: var(--radius);
+box-shadow: var(--shadow);
+padding: 18px;
+}
+.card h3{margin: 0 0 8px; font-size: 16px;}
+.muted{color: var(--muted);}
+.steps{counter-reset: step;}
+.step{
+position:relative;
+padding-left: 44px;
+min-height: 38px;
+}
+.step:before{
+counter-increment: step;
+content: counter(step);
+position:absolute; left:0; top:0;
+width: 32px; height: 32px;
+border-radius: 12px;
+display:flex; align-items:center; justify-content:center;
+background: linear-gradient(135deg, rgba(122,167,255,.9), rgba(87,227,198,.9));
+color:#071022;
+font-weight:900;
+}
+.faq details{
+border:1px solid rgba(255,255,255,.12);
+background: rgba(255,255,255,.05);
+border-radius: 14px;
+padding: 12px 14px;
+margin: 10px 0;
+}
+.faq summary{cursor:pointer; font-weight:800;}
+.warn{
+border-left: 4px solid var(--danger);
+background: rgba(255,107,107,.10);
+padding: 12px 14px;
+border-radius: 14px;
+border:1px solid rgba(255,107,107,.22);
+color: var(--text);
+}
+.foot{
+padding: 26px 0 50px;
+color: var(--muted);
+border-top: 1px solid var(--border);
+margin-top: 22px;
+}
+.mini{font-size:12px; color: var(--muted);}
+.ctaBar{
+position:fixed;
+left:0; right:0; bottom:0;
+background: rgba(11,18,32,.72);
+border-top:1px solid var(--border);
+backdrop-filter: blur(10px);
+padding: 10px 0;
+z-index: 20;
+}
+.ctaIn{
+display:flex; gap:10px; align-items:center; justify-content:space-between;
+}
+.ctaIn .txt{font-weight:800; font-size:13px;}
+.ctaIn .sub{font-size:12px; color: var(--muted); margin-top:2px;}
+.ctaIn .left{display:flex; flex-direction:column;}
+@media (max-width: 920px){
+.heroGrid{grid-template-columns:1fr; }
+.grid3{grid-template-columns:1fr; }
+.grid2{grid-template-columns:1fr; }
+h1{font-size: 28px;}
+.priceRow{grid-template-columns:1fr;}
+.navbtns .btn{padding: 10px 12px; font-size: 13px;}
+}
+.anchor{position:relative; top:-80px;}
+.pill{
+display:inline-flex; align-items:center; gap:8px;
+padding:8px 10px;
+border-radius:999px;
+border:1px solid rgba(255,255,255,.14);
+background: rgba(255,255,255,.05);
+font-size:12px; font-weight:800; color: var(--muted);
+}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<div class="nav">
+<div class="wrap navin">
+<a class="brand" href="#top">
+<div class="logo" aria-hidden="true"></div>
+<div>
+<strong>中央区マンジャロ オンラインクリニック</strong>
+<span>マンジャロ（Mounjaro）オンライン診療｜全国配送</span>
+</div>
+</a>
+<div class="navbtns">
+<a class="btn" href="#price">料金</a>
+<a class="btn" href="#flow">流れ</a>
+<a class="btn" href="#faq">FAQ</a>
+<!-- ↓ここにLINE予約リンクを入れてください -->
+<a class="btn primary" href="https://lin.ee/XXXXX" target="_blank" rel="noopener">LINEで予約する</a>
+</div>
+</div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+<div class="wrap heroGrid">
+<div class="heroCard">
+<div class="badge">来院不要・完全オンライン診療 / 最短当日発送（※条件あり）</div>
+<h1>マンジャロ2.5mgを<br>オンライン診療で処方</h1>
+<p class="lead">
+医師が診察し、適応確認・副作用説明のうえ処方します。ご自宅へ冷蔵配送（送料別）。
+</p>
+
+<div class="priceRow" id="price">
+<div class="priceBox">
+<small>初回限定</small>
+<b>1本 3,500円（税込）</b>
+<div class="note">※キャンペーン条件は下部に記載</div>
+</div>
+<div class="priceBox">
+<small>通常価格</small>
+<b>1本 4,000円（税込）</b>
+<div class="note">送料：1,300円（税込）</div>
+</div>
+</div>
+
+<div class="kpis">
+<div class="kpi">正規医薬品のみ</div>
+<div class="kpi">診察5分目安</div>
+<div class="kpi">全国配送（冷蔵）</div>
+<div class="kpi">LINE予約が最短</div>
+</div>
+
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+<a class="btn primary" href="https://lin.ee/XXXXX" target="_blank" rel="noopener">LINEで予約する</a>
+<a class="btn" href="#flow">診療の流れを見る</a>
+</div>
+
+<p class="mini" style="margin-top:12px;">
+※自由診療です。保険診療ではありません。未成年の方はお受けできません。
+</p>
+</div>
+
+<div class="heroCard sideCard">
+<h2>このような方に</h2>
+<ul class="list">
+<li>通院せずにマンジャロを処方してほしい</li>
+<li>継続しやすい価格で始めたい</li>
+<li>GLP-1治療が初めてで不安</li>
+<li>医師の説明を受けて安全に始めたい</li>
+</ul>
+
+<div style="height:12px"></div>
+
+<div class="warn">
+<strong>重要：</strong>膵炎の既往、妊娠中（可能性含む）、重い消化器症状がある方などは処方できない場合があります。診察で医師が判断します。
+</div>
+
+<div style="height:14px"></div>
+<div class="pill">検索用：マンジャロ / Mounjaro / GLP-1 / オンライン診療 / 中央区</div>
+</div>
+</div>
+</header>
+
+<!-- FEATURES -->
+<section>
+<div class="wrap grid3">
+<div class="card">
+<h3>価格が明確</h3>
+<p class="muted">2.5mg：初回3,500円、通常4,000円（税込）。送料1,300円（税込）。追加費用が発生する場合は事前に案内します。</p>
+</div>
+<div class="card">
+<h3>オンラインで完結</h3>
+<p class="muted">LINE予約 → 事前問診 → ビデオ診察 → 決済 → 冷蔵配送。来院不要です。</p>
+</div>
+<div class="card">
+<h3>医師が診療</h3>
+<p class="muted">問診内容・禁忌・副作用を確認し、診療録を作成のうえ処方します。</p>
+</div>
+</div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+<div class="wrap">
+<div class="anchor"></div>
+<div class="card">
+<h3>オンライン診療の流れ</h3>
+<div class="grid2" style="margin-top:12px;">
+<div class="steps">
+<div class="step">
+<div><strong>LINEで予約</strong></div>
+<div class="muted">予約ボタンから友だち追加 → 希望日時を選択。</div>
+</div>
+<div style="height:10px"></div>
+<div class="step">
+<div><strong>事前問診に回答</strong></div>
+<div class="muted">身長・体重・既往歴・服薬状況などを入力。</div>
+</div>
+<div style="height:10px"></div>
+<div class="step">
+<div><strong>オンライン診察（5分目安）</strong></div>
+<div class="muted">本人確認、適応確認、副作用説明、同意取得。</div>
+</div>
+<div style="height:10px"></div>
+<div class="step">
+<div><strong>決済</strong></div>
+<div class="muted">クレジットカード等（運用に合わせて記載を変更可）。</div>
+</div>
+</div>
+
+<div class="steps">
+<div class="step">
+<div><strong>処方・発送</strong></div>
+<div class="muted">決済確認後、冷蔵梱包で発送。追跡番号を案内します。</div>
+</div>
+<div style="height:10px"></div>
+<div class="step">
+<div><strong>到着・自己注射</strong></div>
+<div class="muted">使用方法の案内を同封／またはLINEで送付。</div>
+</div>
+<div style="height:10px"></div>
+<div class="step">
+<div><strong>フォロー</strong></div>
+<div class="muted">副作用・体調変化はLINEで相談可能（診療が必要な場合は再診）。</div>
+</div>
+<div style="height:10px"></div>
+<div class="step">
+<div><strong>継続処方</strong></div>
+<div class="muted">次回分もオンラインで完結。状態により用量調整を検討します。</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+<a class="btn primary" href="https://lin.ee/XXXXX" target="_blank" rel="noopener">LINEで予約する</a>
+<a class="btn" href="#faq">よくある質問へ</a>
+</div>
+
+<p class="mini" style="margin-top:10px;">
+※発送は営業日対応です。当日発送は「診察・決済が午前中までに完了」など条件が必要な場合があります。実運用に合わせて文言を調整してください。
+</p>
+</div>
+</div>
+</section>
+
+<!-- PRICE -->
+<section>
+<div class="wrap grid2">
+<div class="card">
+<h3>料金</h3>
+<p class="muted">表示価格は税込です。</p>
+<div class="priceBox" style="margin-top:10px;">
+<small>マンジャロ（Mounjaro）2.5mg</small>
+<b>初回 3,500円（税込） / 1本</b>
+<div class="note">通常 4,000円（税込） / 1本</div>
+</div>
+<div class="priceBox" style="margin-top:10px;">
+<small>送料</small>
+<b>1,300円（税込）</b>
+<div class="note">冷蔵配送（地域・季節により配送方法が変わる場合があります）</div>
+</div>
+
+<div class="warn" style="margin-top:14px;">
+<strong>初回3,500円の条件（例）：</strong><br>
+・初めて当院でマンジャロ2.5mgを処方される方<br>
+・LINE友だち追加＋事前問診回答<br>
+※条件は先生の運用に合わせて変更してください
+</div>
+</div>
+
+<div class="card">
+<h3>安全のための確認事項</h3>
+<ul class="list">
+<li>医師が診察し、禁忌・リスクを確認します</li>
+<li>副作用（吐き気、便秘など）と対処法を説明します</li>
+<li>強い腹痛などの症状があれば使用を中止し連絡してください</li>
+<li>処方の可否は診察で判断します（希望に沿えない場合があります）</li>
+</ul>
+<p class="mini" style="margin-top:10px;">
+※本ページは一般的な案内です。診療行為は医師の診察と判断に基づきます。
+</p>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq">
+<div class="wrap">
+<div class="anchor"></div>
+<div class="card">
+<h3>よくある質問</h3>
+
+<details>
+<summary>来院は必要ですか？</summary>
+<div class="muted">必要ありません。スマートフォンでオンライン診療を行い、処方薬は冷蔵配送でお届けします。</div>
+</details>
+
+<details>
+<summary>どれくらいで届きますか？</summary>
+<div class="muted">地域・発送タイミングによりますが、通常は発送後1〜2日で到着します。追跡番号をご案内します。</div>
+</details>
+
+<details>
+<summary>診察時間はどれくらいですか？</summary>
+<div class="muted">目安は5分程度です（初回は確認項目が多くなるため長くなる場合があります）。</div>
+</details>
+
+<details>
+<summary>支払い方法は？</summary>
+<div class="muted">クレジットカード等に対応しています（運用に合わせて記載を変更してください）。</div>
+</details>
+
+<details>
+<summary>薬は本物ですか？</summary>
+<div class="muted">当院では正規医薬品のみを取り扱います。処方は医師の診察のもと行います。</div>
+</details>
+
+<details>
+<summary>キャンセルできますか？</summary>
+<div class="muted">診察前のキャンセルは可能です。診察後・決済後のキャンセル／返金は原則できません（医薬品の性質上）。詳細は運用規約に従います。</div>
+</details>
+
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+<a class="btn primary" href="https://lin.ee/XXXXX" target="_blank" rel="noopener">LINEで予約する</a>
+<a class="btn" href="#clinic">クリニック情報へ</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CLINIC INFO -->
+<section id="clinic">
+<div class="wrap">
+<div class="anchor"></div>
+<div class="card">
+<h3>クリニック情報</h3>
+<div class="grid2" style="margin-top:10px;">
+<div>
+<p class="muted" style="margin:0 0 10px;">
+記載は仮です。開設届の内容に合わせて差し替えてください。
+</p>
+<ul class="list">
+<li><strong>名称：</strong>中央区マンジャロ オンラインクリニック</li>
+<li><strong>所在地：</strong>東京都中央区（以下、住所を記載）</li>
+<li><strong>診療形態：</strong>オンライン診療（自由診療）</li>
+<li><strong>問い合わせ：</strong>（電話番号 / LINE）</li>
+<li><strong>診療時間：</strong>（例）平日 10:00〜18:00</li>
+</ul>
+</div>
+<div>
+<div class="warn">
+<strong>免責・注意事項（必須）：</strong><br>
+・本サービスは自由診療です。<br>
+・効果には個人差があります。<br>
+・医師の判断により処方できない場合があります。<br>
+・副作用が疑われる場合は使用を中止し、医療機関を受診してください。<br>
+・緊急時は救急（119）または最寄り医療機関へ。
+</div>
+</div>
+</div>
+
+<p class="mini" style="margin-top:12px;">
+※本ページは広告表現の誇大表示にならないよう、効果の断定・保証表現は避けています。必要なら医療広告ガイドラインに沿って文言調整してください。
+</p>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<div class="wrap foot">
+<div class="mini">
+© <span id="y"></span> 中央区マンジャロ オンラインクリニック
+<br>本ページはテンプレートです。LINEリンク、住所、診療時間、決済方法、キャンペーン条件などを実運用に合わせて編集してください。
+</div>
+</div>
+
+<!-- Sticky CTA -->
+<div class="ctaBar" role="region" aria-label="予約CTA">
+<div class="wrap ctaIn">
+<div class="left">
+<div class="txt">マンジャロ2.5mg｜初回 3,500円（税込）</div>
+<div class="sub">完全オンライン診療・全国配送（送料1,300円）</div>
+</div>
+<div>
+<a class="btn primary" href="https://lin.ee/XXXXX" target="_blank" rel="noopener">LINEで予約する</a>
+</div>
+</div>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
