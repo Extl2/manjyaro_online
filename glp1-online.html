@@ -1,0 +1,481 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH0E8VQ1E3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JH0E8VQ1E3');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GLP-1オンライン診療とは？流れ・メリット・注意点を分かりやすく解説｜中央区マンジャロオンラインクリニック</title>
+  <meta name="description" content="GLP-1オンライン診療とは何か、予約から処方までの流れ、メリット、注意点を分かりやすく解説します。初めての方にも読みやすい入門記事です。" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://example.com/glp1-online.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="GLP-1オンライン診療とは？流れ・メリット・注意点を分かりやすく解説" />
+  <meta property="og:description" content="GLP-1オンライン診療の基本、流れ、メリット、注意点を初めての方向けにまとめました。" />
+  <meta property="og:url" content="https://example.com/glp1-online.html" />
+  <meta property="og:site_name" content="中央区マンジャロオンラインクリニック" />
+
+  <style>
+    :root{
+      --bg:#fffafc;
+      --bg2:#f4fbff;
+      --card:#ffffff;
+      --text:#24324a;
+      --muted:#6e7d94;
+      --border:rgba(36,50,74,.10);
+      --accent:#ff7fb1;
+      --accent2:#7ec8ff;
+      --line:#06c755;
+      --line-dark:#05a847;
+      --shadow:0 12px 32px rgba(64,86,124,.10);
+      --radius:18px;
+      --radius-lg:28px;
+      --max:980px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,"Hiragino Sans","Noto Sans JP","Segoe UI",sans-serif;
+      color:var(--text);
+      line-height:1.9;
+      background:
+        radial-gradient(900px 500px at 0% 0%, rgba(255,127,177,.14), transparent 60%),
+        radial-gradient(900px 520px at 100% 10%, rgba(126,200,255,.16), transparent 60%),
+        linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .nav{
+      position:sticky;top:0;z-index:30;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .navin{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:12px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;text-decoration:none;
+    }
+    .logo{
+      width:42px;height:42px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 10px 24px rgba(126,200,255,.20);
+    }
+    .brand strong{display:block;font-size:14px;line-height:1.2}
+    .brand span{display:block;font-size:12px;color:var(--muted)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 16px;border-radius:999px;
+      text-decoration:none;font-weight:800;
+      border:1px solid var(--border);
+      background:#fff;box-shadow:0 6px 18px rgba(64,86,124,.06);
+      transition:.15s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      background:linear-gradient(135deg,var(--line),#33d17a);
+      color:#fff;border-color:transparent;
+      box-shadow:0 12px 24px rgba(6,199,85,.20);
+    }
+    .btn.primary:hover{background:linear-gradient(135deg,var(--line-dark),#24bf68)}
+    .hero{
+      padding:34px 0 16px;
+    }
+    .heroCard,.card{
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius-lg);
+    }
+    .heroCard{padding:28px}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;font-weight:800;color:#5f7088;
+      padding:8px 12px;border-radius:999px;
+      background:linear-gradient(135deg,#fff2f7,#eef8ff);
+      border:1px solid var(--border);
+      margin-bottom:14px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:38px;line-height:1.2;letter-spacing:-.02em;
+    }
+    .lead{
+      margin:0;color:var(--muted);font-size:15px;
+    }
+    .heroGrid{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:stretch;
+      margin-top:18px;
+    }
+    .miniCard{
+      padding:20px;
+      background:linear-gradient(135deg,#fff4f8,#eef8ff);
+      border-radius:22px;border:1px solid var(--border);
+      height:100%;
+    }
+    .miniCard h2{margin:0 0 8px;font-size:18px}
+    .miniCard p{margin:0;color:var(--muted);font-size:14px}
+    .miniCard ul{margin:12px 0 0;padding-left:18px;color:var(--muted)}
+    .article{
+      padding:18px 0 26px;
+    }
+    .toc,.sectionBox{
+      background:#fff;border:1px solid var(--border);
+      border-radius:22px;box-shadow:var(--shadow);
+      padding:22px;
+    }
+    .toc h2,.sectionBox h2{
+      margin:0 0 12px;font-size:24px;line-height:1.35;
+    }
+    .toc ol{
+      margin:0;padding-left:18px;
+    }
+    .toc li{margin:8px 0}
+    .sectionBox{margin-top:16px}
+    .sectionBox h3{
+      margin:20px 0 8px;font-size:20px;line-height:1.4;
+    }
+    .sectionBox p{margin:0 0 12px}
+    .sectionBox ul{
+      margin:0 0 12px;padding-left:20px;
+    }
+    .note{
+      border-left:4px solid #ff8aa5;
+      background:#fff4f7;
+      padding:14px 16px;border-radius:14px;
+      font-size:14px;
+    }
+    .pointBox{
+      background:linear-gradient(135deg,#fff8fb,#f6fbff);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px;
+      margin-top:12px;
+    }
+    .ctaPanel{
+      margin-top:18px;
+      background:linear-gradient(135deg,#fff1f7 0%, #eef8ff 100%);
+      border:1px solid var(--border);
+      border-radius:26px;
+      padding:22px;
+    }
+    .ctaPanel h2{
+      margin:0 0 8px;font-size:28px;line-height:1.35;
+    }
+    .ctaPanel p{margin:0 0 14px;color:var(--muted)}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    .faq details{
+      border:1px solid var(--border);
+      background:#fff;border-radius:16px;padding:12px 14px;margin-top:10px;
+    }
+    .faq summary{cursor:pointer;font-weight:800}
+    .muted{color:var(--muted)}
+    .foot{
+      padding:26px 0 90px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .sticky{
+      position:fixed;left:0;right:0;bottom:0;z-index:40;
+      background:rgba(255,255,255,.90);
+      backdrop-filter:blur(10px);
+      border-top:1px solid var(--border);
+      padding:10px 0;
+    }
+    .stickyIn{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .sticky strong{font-size:13px}
+    .sticky span{display:block;font-size:12px;color:var(--muted)}
+    @media (max-width: 860px){
+      .heroGrid,.stickyIn{grid-template-columns:1fr;display:grid}
+      h1{font-size:30px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"GLP-1オンライン診療とは？流れ・メリット・注意点を分かりやすく解説",
+    "description":"GLP-1オンライン診療の基本、予約から処方までの流れ、メリット、注意点をまとめた記事です。",
+    "author":{
+      "@type":"Organization",
+      "name":"中央区マンジャロオンラインクリニック"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"中央区マンジャロオンラインクリニック"
+    },
+    "mainEntityOfPage":"https://example.com/glp1-online.html",
+    "inLanguage":"ja"
+  }
+  </script>
+</head>
+<body>
+  <div class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>中央区マンジャロオンラインクリニック</strong>
+          <span>GLP-1オンライン診療・全国配送</span>
+        </div>
+      </a>
+      <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'glp1_header_line'});">LINEで予約する</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="heroCard">
+        <div class="badge">GLP-1オンライン診療を初めて調べる方向け</div>
+        <h1>GLP-1オンライン診療とは？<br>流れ・メリット・注意点を分かりやすく解説</h1>
+        <p class="lead">
+          GLP-1オンライン診療は、来院せずに医師へ相談し、適応があるかを確認したうえで処方を検討する診療方法です。
+          この記事では、GLP-1オンライン診療の基本、予約から処方までの流れ、メリット、注意点を初めての方にも分かりやすく整理しています。
+        </p>
+
+        <div class="heroGrid">
+          <div class="miniCard">
+            <h2>この記事で分かること</h2>
+            <ul>
+              <li>GLP-1オンライン診療の基本</li>
+              <li>予約から処方までの流れ</li>
+              <li>オンライン診療のメリット</li>
+              <li>注意点や副作用の考え方</li>
+              <li>予約前に確認したいポイント</li>
+            </ul>
+          </div>
+          <div class="miniCard">
+            <h2>こんな方におすすめ</h2>
+            <p>
+              GLP-1治療をオンラインで相談したい方、来院せずに進めたい方、まず全体像を把握してから予約したい方に向いています。
+            </p>
+            <div class="btns" style="margin-top:14px;">
+              <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'glp1_hero_line'});">LINEで予約する</a>
+              <a class="btn" href="mounjaro-online.html">マンジャロ記事を見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="article">
+    <div class="wrap">
+      <section class="toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#what">GLP-1オンライン診療とは</a></li>
+          <li><a href="#flow">予約から処方までの流れ</a></li>
+          <li><a href="#merit">オンライン診療のメリット</a></li>
+          <li><a href="#attention">注意点と確認事項</a></li>
+          <li><a href="#sideeffect">副作用について</a></li>
+          <li><a href="#clinic">中央区マンジャロオンラインクリニックのご案内</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ol>
+      </section>
+
+      <section class="sectionBox" id="what">
+        <h2>GLP-1オンライン診療とは</h2>
+        <p>
+          GLP-1オンライン診療とは、スマートフォンやパソコンを使って医師の診察を受け、GLP-1受容体作動薬などの処方可否を相談する診療方法です。
+          クリニックへ直接行かなくても、自宅や職場などから相談しやすい点が特徴です。
+        </p>
+        <p>
+          ただし、オンライン診療だからといって、誰でも必ず処方を受けられるわけではありません。
+          既往歴、現在の体調、服用中の薬、過去の副作用歴などをふまえて、医師が適応を確認します。
+        </p>
+        <div class="note">
+          GLP-1オンライン診療は「通販」ではなく、医師の診察と判断を前提とした医療サービスです。
+        </div>
+      </section>
+
+      <section class="sectionBox" id="flow">
+        <h2>予約から処方までの流れ</h2>
+        <p>一般的なGLP-1オンライン診療の流れは次の通りです。</p>
+
+        <h3>1. LINEや予約フォームから予約</h3>
+        <p>
+          まずは希望日時を選び、予約を入れます。クリニックによっては、LINEから手軽に予約できる形になっています。
+        </p>
+
+        <h3>2. 事前問診に回答</h3>
+        <p>
+          身長、体重、既往歴、服薬状況、アレルギー歴などを入力します。安全に診療を進めるために重要な工程です。
+        </p>
+
+        <h3>3. オンライン診察</h3>
+        <p>
+          医師が体調や希望を確認し、適応や注意点、副作用について説明します。処方できるかどうかは、この診察で判断されます。
+        </p>
+
+        <h3>4. 決済・発送</h3>
+        <p>
+          処方が適切と判断された場合、決済後に発送手続きへ進みます。冷蔵配送に対応している場合は、自宅で受け取りやすくなります。
+        </p>
+
+        <div class="pointBox">
+          <strong>大切なポイント：</strong>
+          流れが分かりやすいクリニックほど、初めての方でも不安が少なく、予約しやすい傾向があります。
+        </div>
+      </section>
+
+      <section class="sectionBox" id="merit">
+        <h2>GLP-1オンライン診療のメリット</h2>
+
+        <h3>来院不要で始めやすい</h3>
+        <p>
+          移動時間や待ち時間を減らしやすいため、忙しい方でも受診しやすい方法です。
+        </p>
+
+        <h3>比較しやすい</h3>
+        <p>
+          料金、診察料、送料、予約方法などを事前に見比べやすく、納得してから予約しやすいのが特徴です。
+        </p>
+
+        <h3>スマホで進めやすい</h3>
+        <p>
+          スマートフォンひとつで予約、問診、診察まで進められるため、初めての方にも取り組みやすい形です。
+        </p>
+
+        <h3>配送で受け取りやすい</h3>
+        <p>
+          処方後に配送で受け取れる場合、通院負担を減らしやすくなります。
+        </p>
+      </section>
+
+      <section class="sectionBox" id="attention">
+        <h2>GLP-1オンライン診療の注意点と確認事項</h2>
+        <p>
+          便利な反面、オンライン診療でも安全性の確認はとても重要です。予約前に次のような点を理解しておくと安心です。
+        </p>
+
+        <ul>
+          <li>処方の可否は医師の判断によること</li>
+          <li>既往歴や現在の体調によっては処方できない場合があること</li>
+          <li>副作用や注意点の説明を受ける必要があること</li>
+          <li>緊急時は対面診療や近隣医療機関の受診が必要になる場合があること</li>
+        </ul>
+
+        <p>
+          価格だけでなく、診察の丁寧さ、案内の分かりやすさ、問い合わせのしやすさも確認した方が安心です。
+        </p>
+      </section>
+
+      <section class="sectionBox" id="sideeffect">
+        <h2>副作用について</h2>
+        <p>
+          GLP-1関連薬では、消化器症状を中心とした副作用がみられることがあります。診察時に必ず説明を受け、気になる症状があれば早めに相談することが大切です。
+        </p>
+
+        <h3>代表的にみられることがある症状</h3>
+        <ul>
+          <li>吐き気</li>
+          <li>胃の不快感</li>
+          <li>便秘</li>
+          <li>下痢</li>
+          <li>食欲低下に伴うだるさ</li>
+        </ul>
+
+        <div class="note">
+          強い腹痛、強い嘔吐、普段と違う強い症状がある場合は、使用を中止し、速やかに医療機関へ相談してください。
+        </div>
+      </section>
+
+      <section class="sectionBox" id="clinic">
+        <h2>中央区マンジャロオンラインクリニックのご案内</h2>
+        <p>
+          中央区マンジャロオンラインクリニックでは、GLP-1オンライン診療について分かりやすく相談しやすい導線を整えています。
+          LINEから予約し、事前問診のうえで医師がオンライン診察を行う形です。
+        </p>
+        <p>
+          初めての方でも、料金、流れ、FAQを見ながら予約しやすいように構成しています。まずは内容を確認してから相談したい方にも向いています。
+        </p>
+
+        <div class="ctaPanel">
+          <h2>GLP-1オンライン診療をご希望の方へ</h2>
+          <p>
+            まずはLINEからご予約ください。処方の可否は医師が診察で判断します。詳しい料金や流れはトップページでも確認できます。
+          </p>
+          <div class="btns">
+            <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'glp1_cta_line'});">LINEで予約する</a>
+            <a class="btn" href="index.html">トップページを見る</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectionBox faq" id="faq">
+        <h2>よくある質問</h2>
+
+        <details>
+          <summary>GLP-1オンライン診療は来院不要ですか？</summary>
+          <p class="muted">
+            オンライン診療を前提としている場合、来院不要で進められることがあります。ただし運用は各クリニックで異なります。
+          </p>
+        </details>
+
+        <details>
+          <summary>誰でも処方を受けられますか？</summary>
+          <p class="muted">
+            いいえ。既往歴や体調などをふまえて、医師が処方の可否を判断します。
+          </p>
+        </details>
+
+        <details>
+          <summary>オンライン診療の方が始めやすいですか？</summary>
+          <p class="muted">
+            来院不要で予約しやすく、比較もしやすいため、初めての方には始めやすい方法の一つです。
+          </p>
+        </details>
+
+        <details>
+          <summary>副作用が不安です。</summary>
+          <p class="muted">
+            診察時に注意点の説明を受け、気になる症状があれば早めに相談してください。
+          </p>
+        </details>
+      </section>
+    </div>
+  </main>
+
+  <footer class="wrap foot">
+    <div>
+      © <span id="year"></span> 中央区マンジャロオンラインクリニック<br>
+      <a href="index.html">トップページ</a> /
+      <a href="mounjaro-online.html">マンジャロオンライン診療とは？</a> /
+      <a href="mounjaro-yasui.html">マンジャロを安く始めたい方へ</a> /
+      <a href="tokusho.html">特定商取引法に基づく表示</a>
+    </div>
+  </footer>
+
+  <div class="sticky" role="region" aria-label="予約CTA">
+    <div class="wrap stickyIn">
+      <div>
+        <strong>GLP-1オンライン診療を相談したい方へ</strong>
+        <span>まずはLINEから予約・相談</span>
+      </div>
+      <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'glp1_sticky_line'});">LINEで予約する</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+次は、index.html にこの3本の記事へのリンクをまとめて載せる 「関連記事ブロック」HTML を入れると回遊が増えます。
