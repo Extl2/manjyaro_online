@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://extl2.github.io/manjyaro_online/sitemap.xml
