@@ -129,8 +129,40 @@
       border:1px solid var(--border);
       margin-bottom:12px;
     }
+    .headlineAccent{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:9px 12px;
+      margin:0 0 12px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#fff5f9,#eff9ff);
+      border:1px solid var(--border);
+      color:#4e6179;
+      font-size:13px; font-weight:900;
+    }
     h1{margin:0 0 10px; font-size:38px; line-height:1.16; letter-spacing:-.02em;}
     .lead{color:var(--muted); margin:0 0 16px; font-size:15px;}
+
+    .quickFlow{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin:16px 0 12px;
+    }
+    .quickStep{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:18px;
+      padding:14px 12px;
+      text-align:center;
+    }
+    .quickStep .num{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:28px; height:28px; border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#fff; font-weight:900; margin-bottom:8px;
+    }
+    .quickStep strong{display:block; font-size:14px; line-height:1.4;}
+    .quickStep span{display:block; color:var(--muted); font-size:12px; margin-top:3px;}
 
     .priceRow{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 18px;}
     .priceBox{
@@ -156,6 +188,16 @@
 
     .heroButtons{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;}
     .mini{font-size:12px; color:var(--muted);}
+    .ctaAssurance{
+      margin-top:10px;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:#fff;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
 
     .sideCard{padding:22px; display:flex; flex-direction:column; justify-content:space-between;}
     .sideCard h2{margin:0 0 12px; font-size:18px;}
@@ -272,6 +314,30 @@
       box-shadow:0 8px 16px rgba(126,200,255,.25);
     }
 
+    .dataCard{
+      background:linear-gradient(135deg,#fff7fb 0%, #eef8ff 100%);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:22px;
+      margin-top:14px;
+    }
+    .dataValue{
+      font-size:34px;
+      line-height:1.1;
+      font-weight:900;
+      margin:10px 0 10px;
+      color:#1f3a5c;
+    }
+    .dataNote{
+      margin-top:10px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:#fff;
+      border:1px solid var(--border);
+      color:var(--muted);
+      font-size:12px;
+    }
+
     .faq details{
       border:1px solid var(--border);
       background:#fff;
@@ -293,6 +359,9 @@
     }
     .ctaText h3{margin:0 0 8px; font-size:28px; line-height:1.28}
     .ctaText p{margin:0 0 14px; color:var(--muted)}
+
+    .spOnly{display:none;}
+    .pcOnly{display:block;}
 
     .foot{
       padding:26px 0 50px;
@@ -317,11 +386,14 @@
     .anchor{position:relative; top:-80px;}
 
     @media (max-width: 920px){
-      .heroGrid,.grid3,.grid2,.ctaPanel,.heroVisual{grid-template-columns:1fr}
+      .heroGrid,.grid3,.grid2,.ctaPanel,.heroVisual,.quickFlow{grid-template-columns:1fr}
       h1{font-size:30px}
       .priceRow{grid-template-columns:1fr}
       .navbtns .btn{padding:10px 12px; font-size:13px}
       .ctaIn{align-items:flex-start; flex-direction:column}
+      .spOnly{display:block;}
+      .pcOnly{display:none !important;}
+      .navbtns .btn.pastel{display:none;}
     }
   </style>
 </head>
@@ -340,7 +412,7 @@
         <a class="btn pastel" href="#price">料金</a>
         <a class="btn pastel" href="#flow">流れ</a>
         <a class="btn pastel" href="#faq">FAQ</a>
-        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'header_line'});">LINE友だち追加して予約する</a>
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'header_line'});">LINEで無料相談する（1分で完了）</a>
       </div>
     </div>
   </div>
@@ -350,11 +422,29 @@
     <div class="wrap heroGrid">
       <div class="heroCard">
         <div class="badge">✨ 来院不要・完全オンライン診療 / 最短当日発送</div>
-        <h1>マンジャロを<br>オンライン診療で処方</h1>
+        <div class="headlineAccent">平均体重変化データあり / 医師管理で開始</div>
+        <h1>1ヶ月時点で平均-3.87kg※<br>医師管理のマンジャロ治療</h1>
         <p class="lead">
-          医師が診察し、適応確認・副作用説明のうえ処方します。ご自宅へ冷蔵配送（送料無料）。
-          
+          当院では、医師が診察し、適応確認・副作用説明のうえで処方します。LINEから予約し、そのままオンライン診療・決済・配送まで進めます。
         </p>
+
+        <div class="quickFlow" aria-label="予約の3ステップ">
+          <div class="quickStep">
+            <div class="num">1</div>
+            <strong>LINE追加</strong>
+            <span>1タップで開始</span>
+          </div>
+          <div class="quickStep">
+            <div class="num">2</div>
+            <strong>オンライン診察</strong>
+            <span>5分目安</span>
+          </div>
+          <div class="quickStep">
+            <div class="num">3</div>
+            <strong>ご自宅へ配送</strong>
+            <span>冷蔵・送料無料</span>
+          </div>
+        </div>
 
         <div class="priceRow" id="price">
           <div class="priceBox">
@@ -377,12 +467,17 @@
         </div>
 
         <div class="heroButtons">
-          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_line'});">LINEで予約する</a>
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_line'});">LINEで無料相談する（1分で完了）</a>
           <a class="btn" href="#flow">診療の流れを見る</a>
         </div>
 
+        <div class="ctaAssurance">
+          ※ 営業電話はありません。LINEから予約・相談のみで進められます。
+        </div>
+
         <p class="mini" style="margin-top:12px;">
-          ※ 自由診療です。保険診療ではありません。未成年の方はお受けできません。
+          ※ 自由診療です。保険診療ではありません。未成年の方はお受けできません。<br>
+          ※ 体重変化には個人差があり、効果を保証するものではありません。
         </p>
       </div>
 
@@ -450,7 +545,7 @@
     <div class="wrap">
       <div class="card" style="margin-bottom:14px;">
         <h2 class="sectionTitle">内科専門医が丁寧に説明します</h2>
-        <p class="sectionLead">担当医：グランエタニティ銀座クリニック　　医師　津坂憲政（慶応大学出身、内科専門医）</p>
+        <p class="sectionLead">担当医：グランエタニティ銀座クリニック　医師　津坂憲政（慶応大学出身、内科専門医）</p>
       </div>
 
       <div class="grid3">
@@ -479,7 +574,6 @@
       <div class="anchor"></div>
       <div class="card">
         <h2 class="sectionTitle">オンライン診療の流れ</h2>
-        <p class="sectionLead"></p>
 
         <div class="grid2" style="margin-top:12px;">
           <div class="steps">
@@ -528,8 +622,12 @@
         </div>
 
         <div class="heroButtons">
-          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'flow_line'});">LINEで予約する</a>
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'flow_line'});">LINEで今すぐ診察予約（当日OK）</a>
           <a class="btn" href="#faq">よくある質問へ</a>
+        </div>
+
+        <div class="ctaAssurance">
+          ※ LINE追加後、そのまま予約・相談に進めます。
         </div>
 
         <p class="mini" style="margin-top:10px;">
@@ -580,66 +678,80 @@
     </div>
   </section>
 
+  <!-- DATA -->
+  <section>
+    <div class="wrap">
+      <div class="dataCard">
+        <h2 class="sectionTitle">当院データのご紹介</h2>
+        <p class="sectionLead">数値のみを強調せず、医師の診察と生活習慣の確認を前提にご案内しています。</p>
+        <div class="dataValue">1ヶ月時点の平均体重変化 -3.87kg</div>
+        <div class="muted">当院におけるマンジャロ投与患者（n=43）のデータでは、投与開始後1ヶ月時点の平均体重変化は-3.87kgでした。</div>
+        <div class="dataNote">
+          ※ これは当院での一例であり、効果を保証するものではありません。<br>
+          ※ 体重減少には個人差があり、生活習慣等の影響を受けます。<br>
+          ※ 医師の診察のもと適切に使用する必要があります。<br>
+          ※ 自由診療（保険適用外）です。
+        </div>
+        <div class="heroButtons" style="margin-top:16px;">
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'data_line'});">LINEで無料相談する（1分で完了）</a>
+          <a class="btn" href="#clinic">クリニック情報を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section style="padding:60px 20px;background:#f9fcff;">
-<div style="max-width:1000px;margin:auto;">
+    <div style="max-width:1000px;margin:auto;">
+      <h2 style="text-align:center;font-size:28px;margin-bottom:40px;">患者様の口コミ</h2>
 
-<h2 style="text-align:center;font-size:28px;margin-bottom:40px;">
-患者様の口コミ
-</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>オンライン診療がとても簡単でした。LINE予約してすぐ診察でき、マンジャロも翌日届きました。</p>
+          <b>30代女性</b>
+        </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>他のクリニックより価格が安かったので利用しました。説明も丁寧で安心できました。</p>
+          <b>40代女性</b>
+        </div>
 
-<div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-★★★★★ 
-<p>オンライン診療がとても簡単でした。LINE予約してすぐ診察でき、マンジャロも翌日届きました。</p>
-<b>30代女性</b>
-</div>
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>通院不要でマンジャロが処方されるのが便利。仕事が忙しいのでオンライン診療は助かります。</p>
+          <b>30代男性</b>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-★★★★★ 
-<p>他のクリニックより価格が安かったので利用しました。説明も丁寧で安心できました。</p>
-<b>40代女性</b>
-</div>
+  <!-- FULL ETERNITY誘導 -->
+  <section style="padding:50px 20px;background:#fffaf7;">
+    <div style="max-width:900px;margin:auto;padding:35px;border-radius:16px;border:1px solid #eadfd7;box-shadow:0 8px 24px rgba(0,0,0,0.06);text-align:center;">
+      <h2 style="font-size:26px;margin-bottom:18px;">
+        ダイエットとあわせて<br>
+        美容ケアも気になる方へ
+      </h2>
 
-<div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-★★★★★ 
-<p>通院不要でマンジャロが処方されるのが便利。仕事が忙しいのでオンライン診療は助かります。</p>
-<b>30代男性</b>
-</div>
+      <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:16px;">
+        マンジャロによる体重管理をきっかけに、<br>
+        肌のコンディションや美容ケアについてご相談をいただくことがあります。
+      </p>
 
-</div>
+      <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:24px;">
+        当院ではスキンケアをご希望の方へ、<br>
+        <strong>幹細胞上清液美容液「FULL ETERNITY」</strong>もご案内しています。
+      </p>
 
-</div>
-</section>
+      <a href="https://extl2.github.io/mounjaro_flow/full_eternity2_lp.html"
+         style="display:inline-block;padding:16px 36px;border-radius:999px;
+         background:#b3875a;color:white;text-decoration:none;
+         font-weight:bold;font-size:18px;">FULL ETERNITYを見る
+      </a>
+    </div>
+  </section>
 
-<!-- FULL ETERNITY誘導 -->
-<section style="padding:50px 20px;background:#fffaf7;">
-  <div style="max-width:900px;margin:auto;padding:35px;border-radius:16px;border:1px solid #eadfd7;box-shadow:0 8px 24px rgba(0,0,0,0.06);text-align:center;">
-
-    <h2 style="font-size:26px;margin-bottom:18px;">
-      ダイエットとあわせて<br>
-      美容ケアも気になる方へ
-    </h2>
-
-    <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:16px;">
-      マンジャロによる体重管理をきっかけに、<br>
-      肌のコンディションや美容ケアについてご相談をいただくことがあります。
-    </p>
-
-    <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:24px;">
-      当院ではスキンケアをご希望の方へ、<br>
-      <strong>幹細胞上清液美容液「FULL ETERNITY」</strong>もご案内しています。
-    </p>
-
-    <a href="https://extl2.github.io/mounjaro_flow/full_eternity2_lp.html"
-       style="display:inline-block;padding:16px 36px;border-radius:999px;
-       background:#b3875a;color:white;text-decoration:none;
-       font-weight:bold;font-size:18px;">FULL ETERNITYを見る
-    </a>
-
-  </div>
-</section>
-  
   <!-- FAQ -->
   <section id="faq" class="faq">
     <div class="wrap">
@@ -676,20 +788,21 @@
           <summary>キャンセルできますか？</summary>
           <div class="muted">診察前のキャンセルは可能です。診察後・決済後のキャンセル／返金は原則できません（医薬品の性質上）。詳細は運用規約に従います。</div>
         </details>
+
         <section style="padding:40px 20px;">
-  <div style="max-width:1000px;margin:auto;">
-    <h2>マンジャロについて詳しく知りたい方へ</h2>
-    <ul>
-      <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-online.html">マンジャロオンライン診療とは？価格・処方方法・注意点を解説</a></li>
-      <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-yasui.html">マンジャロを安く始めたい方へ｜価格の見方・オンライン診療の選び方</a></li>
-      <li><a href="https://extl2.github.io/manjyaro_online/glp1-online.html">GLP-1オンライン診療とは？｜価格の見方・オンライン診療の選び方</a></li>
-      <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-hikaku.html">マンジャロ価格比較</a></li>
-    </ul>
-  </div>
-</section>
+          <div style="max-width:1000px;margin:auto;">
+            <h2>マンジャロについて詳しく知りたい方へ</h2>
+            <ul>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-online.html">マンジャロオンライン診療とは？価格・処方方法・注意点を解説</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-yasui.html">マンジャロを安く始めたい方へ｜価格の見方・オンライン診療の選び方</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/glp1-online.html">GLP-1オンライン診療とは？｜価格の見方・オンライン診療の選び方</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-hikaku.html">マンジャロ価格比較</a></li>
+            </ul>
+          </div>
+        </section>
 
         <div class="heroButtons" style="margin-top:14px;">
-          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'faq_line'});">LINEで予約する</a>
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'faq_line'});">LINEで無料相談する（1分で完了）</a>
           <a class="btn" href="#clinic">クリニック情報へ</a>
         </div>
       </div>
@@ -701,12 +814,13 @@
     <div class="wrap">
       <div class="ctaPanel">
         <div class="ctaText">
-          <h3>まずはLINEから、気軽にご予約ください</h3>
-          <p></p>
+          <h3>まずはLINEから、気軽にご相談・ご予約ください</h3>
+          <p>1タップでLINEが開きます。予約後はオンライン診療から配送までスムーズに進めます。</p>
           <div class="heroButtons">
-            <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'cta_line'});">LINEで予約する</a>
+            <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'cta_line'});">LINEで無料相談する（1分で完了）</a>
             <a class="btn" href="#price">料金を見る</a>
           </div>
+          <div class="ctaAssurance">※ 営業電話はありません。LINEのみで完結します。</div>
         </div>
         <div class="heroVisual" aria-hidden="true" style="margin-top:0;">
           <div class="illustration">
@@ -731,7 +845,7 @@
           </div>
           <div class="heroInfo">
             <div class="infoCard"><strong>🌸 お気軽にどうぞ</strong><span>ご不明点があれば、LINEでお尋ねください。</span></div>
-            <div class="infoCard"><strong>✅ いつでもどうぞ</strong><span>24時間LINEで対応いたします。</span></div>
+            <div class="infoCard"><strong>✅ いつでもどうぞ</strong><span>24時間LINEで受付可能です。</span></div>
           </div>
         </div>
       </div>
@@ -777,7 +891,6 @@
   <div class="wrap foot">
     <div class="mini">
       © <span id="y"></span> マンジャロオンライン外来｜中央区オンライン医療ダイエット<br>
-
     </div>
   </div>
 
@@ -789,7 +902,7 @@
         <div class="sub">完全オンライン診療・全国配送</div>
       </div>
       <div>
-        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'sticky_line'});">LINEで予約する</a>
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'sticky_line'});">LINEで無料相談する</a>
       </div>
     </div>
   </div>
