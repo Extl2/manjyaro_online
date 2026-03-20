@@ -12,8 +12,8 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>マンジャロオンライン外来｜中央区オンライン医療ダイエット｜マンジャロ2.5mg 3,425円〜（税込・送料無料）｜全国配送</title>
-  <meta name="description" content="マンジャロオンライン外来｜中央区オンライン医療ダイエット。マンジャロ（Mounjaro）2.5mg：3,425円〜（税込）。完全オンライン診療、全国配送（送料無料）。" />
+  <title>マンジャロオンライン外来｜中央区オンライン医療ダイエット｜1ヶ月分14,800円〜（税込・送料無料）｜全国配送</title>
+  <meta name="description" content="マンジャロオンライン外来｜中央区オンライン医療ダイエット。マンジャロ（Mounjaro）1ヶ月分14,800円〜（税込・送料無料）。完全オンライン診療、全国配送。" />
 
   <style>
     :root{
@@ -338,6 +338,30 @@
       font-size:12px;
     }
 
+    .reviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .reviewCard{
+      background:#fff;
+      padding:25px;
+      border-radius:18px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      border:1px solid var(--border);
+    }
+    .reviewStars{font-weight:900;letter-spacing:.08em;margin-bottom:10px;}
+    .reviewMeta{color:var(--muted);font-size:12px;margin-top:12px;}
+
+    .articleList{display:grid; gap:12px;}
+    .articleItem{
+      display:block;
+      padding:16px 18px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:#fff;
+      text-decoration:none;
+      box-shadow:0 6px 18px rgba(64,86,124,.05);
+    }
+    .articleItem strong{display:block; margin-bottom:4px;}
+    .articleItem span{color:var(--muted); font-size:13px;}
+
     .faq details{
       border:1px solid var(--border);
       background:#fff;
@@ -359,9 +383,6 @@
     }
     .ctaText h3{margin:0 0 8px; font-size:28px; line-height:1.28}
     .ctaText p{margin:0 0 14px; color:var(--muted)}
-
-    .spOnly{display:none;}
-    .pcOnly{display:block;}
 
     .foot{
       padding:26px 0 50px;
@@ -386,19 +407,16 @@
     .anchor{position:relative; top:-80px;}
 
     @media (max-width: 920px){
-      .heroGrid,.grid3,.grid2,.ctaPanel,.heroVisual,.quickFlow{grid-template-columns:1fr}
+      .heroGrid,.grid3,.grid2,.ctaPanel,.heroVisual,.quickFlow,.reviewGrid{grid-template-columns:1fr}
       h1{font-size:30px}
       .priceRow{grid-template-columns:1fr}
       .navbtns .btn{padding:10px 12px; font-size:13px}
       .ctaIn{align-items:flex-start; flex-direction:column}
-      .spOnly{display:block;}
-      .pcOnly{display:none !important;}
       .navbtns .btn.pastel{display:none;}
     }
   </style>
 </head>
 <body>
-  <!-- NAV -->
   <div class="nav">
     <div class="wrap navin">
       <a class="brand" href="#top">
@@ -417,7 +435,6 @@
     </div>
   </div>
 
-  <!-- HERO -->
   <header class="hero" id="top">
     <div class="wrap heroGrid">
       <div class="heroCard">
@@ -448,14 +465,14 @@
 
         <div class="priceRow" id="price">
           <div class="priceBox">
-            <small>人気の開始プラン</small>
-            <b>2.5mg 1本 3,425円〜<br>（税込・送料無料）</b>
-            <div class="note">初めての方にも始めやすい価格帯</div>
+            <small>開始しやすい基本プラン</small>
+            <b>2.5mg 1ヶ月分 14,800円<br>（4本・税込・送料無料）</b>
+            <div class="note">まず最初にお支払いいただく金額が分かりやすい料金表示です</div>
           </div>
           <div class="priceBox">
-            <small>継続をご検討の方に</small>
-            <b>5mg 1本 6,863円〜<br>（税込・送料無料）</b>
-            <div class="note">医師の判断で用量調整を検討します</div>
+            <small>まとめて受け取りたい方に</small>
+            <b>2ヶ月分 29,800円〜<br>（8本・税込・送料無料）</b>
+            <div class="note">継続時の本数や用量は、医師の診察のうえでご案内します</div>
           </div>
         </div>
 
@@ -486,7 +503,7 @@
           <h2>このような方におすすめ</h2>
           <ul class="list">
             <li>通院せずにマンジャロを処方してほしい</li>
-            <li>継続しやすい価格で始めたい</li>
+            <li>まずは1ヶ月分から始めたい</li>
             <li>GLP-1治療が初めてで不安</li>
             <li>医師の説明を受けて安全に始めたい</li>
           </ul>
@@ -540,7 +557,6 @@
     </div>
   </header>
 
-  <!-- FEATURES -->
   <section>
     <div class="wrap">
       <div class="card" style="margin-bottom:14px;">
@@ -551,8 +567,8 @@
       <div class="grid3">
         <div class="card">
           <div class="featureIcon">💰</div>
-          <h3>価格が明確</h3>
-          <p class="muted">2.5mg：1本 3,425円〜、5mg：1本 6,863円〜、税込・送料無料。</p>
+          <h3>料金が分かりやすい</h3>
+          <p class="muted">開始時は1ヶ月分14,800円（税込・送料無料）。最初に支払う金額が見てすぐ分かります。</p>
         </div>
         <div class="card">
           <div class="featureIcon">💻</div>
@@ -568,7 +584,6 @@
     </div>
   </section>
 
-  <!-- FLOW -->
   <section id="flow">
     <div class="wrap">
       <div class="anchor"></div>
@@ -637,12 +652,11 @@
     </div>
   </section>
 
-  <!-- PRICE -->
   <section>
     <div class="wrap grid2">
       <div class="card">
         <h2 class="sectionTitle">料金</h2>
-        <p class="sectionLead">表示価格は全て税込・送料込みです。</p>
+        <p class="sectionLead">表示価格は全て税込・送料込みです。まずは開始しやすい1ヶ月分からご案内しています。</p>
 
         <div class="priceBox" style="margin-top:10px;">
           <small>マンジャロ（Mounjaro）2.5mg</small>
@@ -650,6 +664,7 @@
           <b>29,800円 / 2ヶ月分（8本）</b>
           <b>42,800円 / 3ヶ月分（12本）</b>
           <b>54,800円 / 4ヶ月分（16本）</b>
+          <div class="note">開始時のおすすめは1ヶ月分です。継続本数や用量は、医師の診察によりご案内します。</div>
         </div>
 
         <div class="priceBox" style="margin-top:10px;">
@@ -678,7 +693,6 @@
     </div>
   </section>
 
-  <!-- DATA -->
   <section>
     <div class="wrap">
       <div class="dataCard">
@@ -701,58 +715,32 @@
   </section>
 
   <section style="padding:60px 20px;background:#f9fcff;">
-    <div style="max-width:1000px;margin:auto;">
-      <h2 style="text-align:center;font-size:28px;margin-bottom:40px;">患者様の口コミ</h2>
+    <div class="wrap">
+      <h2 class="sectionTitle" style="text-align:center;">患者様の口コミ</h2>
+      <p class="sectionLead" style="text-align:center;">予約のしやすさ、説明の分かりやすさ、配送スピードについてのお声を掲載しています。</p>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
-        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-          ★★★★★
-          <p>オンライン診療がとても簡単でした。LINE予約してすぐ診察でき、マンジャロも翌日届きました。</p>
-          <b>30代女性</b>
+      <div class="reviewGrid">
+        <div class="reviewCard">
+          <div class="reviewStars">★★★★★</div>
+          <p>LINE追加から予約まで迷わず進めました。診察は10分以内で終わり、初めてでも副作用や使い方を丁寧に説明してもらえたので安心して始められました。発送の連絡も分かりやすく、翌日に受け取れました。</p>
+          <div class="reviewMeta">30代女性 / 初回利用</div>
         </div>
 
-        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-          ★★★★★
-          <p>他のクリニックより価格が安かったので利用しました。説明も丁寧で安心できました。</p>
-          <b>40代女性</b>
+        <div class="reviewCard">
+          <div class="reviewStars">★★★★★</div>
+          <p>仕事の合間にスマホだけで受診できたのが助かりました。料金が最初から1ヶ月分で表示されていて分かりやすく、診察でも無理な案内がなく、必要な説明だけをきちんとしてもらえました。</p>
+          <div class="reviewMeta">40代女性 / 継続相談</div>
         </div>
 
-        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-          ★★★★★
-          <p>通院不要でマンジャロが処方されるのが便利。仕事が忙しいのでオンライン診療は助かります。</p>
-          <b>30代男性</b>
+        <div class="reviewCard">
+          <div class="reviewStars">★★★★★</div>
+          <p>通院の時間が取れないのでオンライン完結なのが便利でした。予約後の流れがシンプルで、本人確認から決済までスムーズ。到着後の使い方もLINEで確認できたので不安が少なかったです。</p>
+          <div class="reviewMeta">30代男性 / 忙しい方向け</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FULL ETERNITY誘導 -->
-  <section style="padding:50px 20px;background:#fffaf7;">
-    <div style="max-width:900px;margin:auto;padding:35px;border-radius:16px;border:1px solid #eadfd7;box-shadow:0 8px 24px rgba(0,0,0,0.06);text-align:center;">
-      <h2 style="font-size:26px;margin-bottom:18px;">
-        ダイエットとあわせて<br>
-        美容ケアも気になる方へ
-      </h2>
-
-      <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:16px;">
-        マンジャロによる体重管理をきっかけに、<br>
-        肌のコンディションや美容ケアについてご相談をいただくことがあります。
-      </p>
-
-      <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:24px;">
-        当院ではスキンケアをご希望の方へ、<br>
-        <strong>幹細胞上清液美容液「FULL ETERNITY」</strong>もご案内しています。
-      </p>
-
-      <a href="https://extl2.github.io/mounjaro_flow/full_eternity2_lp.html"
-         style="display:inline-block;padding:16px 36px;border-radius:999px;
-         background:#b3875a;color:white;text-decoration:none;
-         font-weight:bold;font-size:18px;">FULL ETERNITYを見る
-      </a>
-    </div>
-  </section>
-
-  <!-- FAQ -->
   <section id="faq" class="faq">
     <div class="wrap">
       <div class="anchor"></div>
@@ -771,7 +759,7 @@
 
         <details>
           <summary>診察時間はどれくらいですか？</summary>
-          <div class="muted">目安は5分程度です（初回は確認項目が多くなるため長くなる場合があります）。</div>
+          <div class="muted">目安は5〜10分程度です（初回は確認項目が多くなるため長くなる場合があります）。</div>
         </details>
 
         <details>
@@ -789,18 +777,6 @@
           <div class="muted">診察前のキャンセルは可能です。診察後・決済後のキャンセル／返金は原則できません（医薬品の性質上）。詳細は運用規約に従います。</div>
         </details>
 
-        <section style="padding:40px 20px;">
-          <div style="max-width:1000px;margin:auto;">
-            <h2>マンジャロについて詳しく知りたい方へ</h2>
-            <ul>
-              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-online.html">マンジャロオンライン診療とは？価格・処方方法・注意点を解説</a></li>
-              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-yasui.html">マンジャロを安く始めたい方へ｜価格の見方・オンライン診療の選び方</a></li>
-              <li><a href="https://extl2.github.io/manjyaro_online/glp1-online.html">GLP-1オンライン診療とは？｜価格の見方・オンライン診療の選び方</a></li>
-              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-hikaku.html">マンジャロ価格比較</a></li>
-            </ul>
-          </div>
-        </section>
-
         <div class="heroButtons" style="margin-top:14px;">
           <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'faq_line'});">LINEで無料相談する（1分で完了）</a>
           <a class="btn" href="#clinic">クリニック情報へ</a>
@@ -809,7 +785,33 @@
     </div>
   </section>
 
-  <!-- CTA PANEL -->
+  <section>
+    <div class="wrap">
+      <div class="card">
+        <h2 class="sectionTitle">マンジャロについて詳しく知りたい方へ</h2>
+        <p class="sectionLead">価格の見方、オンライン診療の流れ、注意点を記事でもご案内しています。</p>
+        <div class="articleList">
+          <a class="articleItem" href="https://extl2.github.io/manjyaro_online/mounjaro-online.html">
+            <strong>マンジャロオンライン診療とは？価格・処方方法・注意点を解説</strong>
+            <span>初めての方に向けて、診療の流れと注意点をまとめています。</span>
+          </a>
+          <a class="articleItem" href="https://extl2.github.io/manjyaro_online/mounjaro-yasui.html">
+            <strong>マンジャロを安く始めたい方へ｜価格の見方・オンライン診療の選び方</strong>
+            <span>費用感を確認したい方におすすめの解説記事です。</span>
+          </a>
+          <a class="articleItem" href="https://extl2.github.io/manjyaro_online/glp1-online.html">
+            <strong>GLP-1オンライン診療とは？｜価格の見方・オンライン診療の選び方</strong>
+            <span>GLP-1治療全体を比較して理解したい方に向いています。</span>
+          </a>
+          <a class="articleItem" href="https://extl2.github.io/manjyaro_online/mounjaro-hikaku.html">
+            <strong>マンジャロ価格比較</strong>
+            <span>料金の比較ポイントを整理した記事です。</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
       <div class="ctaPanel">
@@ -852,7 +854,6 @@
     </div>
   </section>
 
-  <!-- CLINIC INFO -->
   <section id="clinic">
     <div class="wrap">
       <div class="anchor"></div>
@@ -887,18 +888,43 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <section style="padding:50px 20px;background:#fffaf7;">
+    <div class="wrap">
+      <div style="max-width:900px;margin:auto;padding:35px;border-radius:16px;border:1px solid #eadfd7;box-shadow:0 8px 24px rgba(0,0,0,0.06);text-align:center;background:#fff;">
+        <h2 style="font-size:26px;margin-bottom:18px;">
+          ダイエットとあわせて<br>
+          美容ケアも気になる方へ
+        </h2>
+
+        <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:16px;">
+          マンジャロによる体重管理をきっかけに、<br>
+          肌のコンディションや美容ケアについてご相談をいただくことがあります。
+        </p>
+
+        <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:24px;">
+          当院ではスキンケアをご希望の方へ、<br>
+          <strong>幹細胞上清液美容液「FULL ETERNITY」</strong>もご案内しています。
+        </p>
+
+        <a href="https://extl2.github.io/mounjaro_flow/full_eternity2_lp.html"
+           style="display:inline-block;padding:16px 36px;border-radius:999px;
+           background:#b3875a;color:white;text-decoration:none;
+           font-weight:bold;font-size:18px;">FULL ETERNITYを見る
+        </a>
+      </div>
+    </div>
+  </section>
+
   <div class="wrap foot">
     <div class="mini">
       © <span id="y"></span> マンジャロオンライン外来｜中央区オンライン医療ダイエット<br>
     </div>
   </div>
 
-  <!-- Sticky CTA -->
   <div class="ctaBar" role="region" aria-label="予約CTA">
     <div class="wrap ctaIn">
       <div class="left">
-        <div class="txt">マンジャロ2.5mg 3,425円〜（税込・送料無料）</div>
+        <div class="txt">マンジャロ 1ヶ月分 14,800円（税込・送料無料）</div>
         <div class="sub">完全オンライン診療・全国配送</div>
       </div>
       <div>
