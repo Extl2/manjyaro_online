@@ -35,6 +35,7 @@
       --radius:18px;
       --radius2:28px;
       --max:1120px;
+      --sale:#e94b72;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -103,6 +104,11 @@
       background:linear-gradient(135deg,#fff2f7,#eef8ff);
       color:var(--text);
     }
+    .btn.heroCta{
+      padding:15px 24px;
+      font-size:18px;
+      box-shadow:0 18px 34px rgba(6,199,85,.24);
+    }
 
     header.hero{padding:30px 0 14px;}
     .heroGrid{
@@ -131,6 +137,39 @@
     }
     h1{margin:0 0 10px; font-size:38px; line-height:1.16; letter-spacing:-.02em;}
     .lead{color:var(--muted); margin:0 0 16px; font-size:15px;}
+
+    .heroTopPrice{
+      margin:14px 0 14px;
+      padding:18px 18px 16px;
+      border-radius:22px;
+      background:linear-gradient(135deg,#fff2f7 0%, #fff 40%, #eef8ff 100%);
+      border:1px solid rgba(233,75,114,.14);
+      box-shadow:0 12px 28px rgba(233,75,114,.10);
+    }
+    .heroTopPrice .cap{
+      display:inline-block;
+      font-size:12px;
+      font-weight:800;
+      color:#8e5871;
+      background:rgba(255,255,255,.86);
+      border:1px solid rgba(233,75,114,.12);
+      border-radius:999px;
+      padding:6px 10px;
+      margin-bottom:8px;
+    }
+    .heroTopPrice .big{
+      font-size:34px;
+      line-height:1.2;
+      font-weight:900;
+      color:var(--sale);
+      letter-spacing:-.02em;
+    }
+    .heroTopPrice .sub{
+      margin-top:6px;
+      font-size:14px;
+      color:var(--muted);
+      font-weight:700;
+    }
 
     .priceRow{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 18px;}
     .priceBox{
@@ -295,10 +334,19 @@
     .ctaText p{margin:0 0 14px; color:var(--muted)}
 
     .foot{
-      padding:26px 0 50px;
+      padding:26px 0 120px;
       color:var(--muted);
       border-top:1px solid var(--border);
       margin-top:22px;
+    }
+
+    .tokushoLink{
+      text-align:center;
+      margin-top:18px;
+    }
+    .tokushoLink a{
+      color:var(--muted);
+      text-decoration:underline;
     }
 
     .ctaBar{
@@ -319,9 +367,11 @@
     @media (max-width: 920px){
       .heroGrid,.grid3,.grid2,.ctaPanel,.heroVisual{grid-template-columns:1fr}
       h1{font-size:30px}
+      .heroTopPrice .big{font-size:30px}
       .priceRow{grid-template-columns:1fr}
       .navbtns .btn{padding:10px 12px; font-size:13px}
       .ctaIn{align-items:flex-start; flex-direction:column}
+      .btn.heroCta{width:100%}
     }
   </style>
 </head>
@@ -351,9 +401,20 @@
       <div class="heroCard">
         <div class="badge">✨ 来院不要・完全オンライン診療 / 最短当日発送</div>
         <h1>マンジャロを<br>オンライン診療で処方</h1>
-        <p class="lead">
-          医師が診察し、適応確認・副作用説明のうえ処方します。ご自宅へ冷蔵配送（送料無料）。
-          
+
+        <div class="heroTopPrice">
+          <div class="cap">人気の開始プラン</div>
+          <div class="big">2.5mg 3,425円〜</div>
+          <div class="sub">税込・送料無料 / 全国配送 / LINE予約が最短</div>
+        </div>
+
+        <div class="heroButtons" style="margin-top:0;">
+          <a class="btn primary heroCta" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_main_line'});">LINEで今すぐ予約する</a>
+          <a class="btn" href="#flow">診療の流れを見る</a>
+        </div>
+
+        <p class="lead" style="margin-top:14px;">
+          医師が診察し、適応確認・副作用説明のうえ処方します。ご自宅へ冷蔵配送します。
         </p>
 
         <div class="priceRow" id="price">
@@ -378,7 +439,7 @@
 
         <div class="heroButtons">
           <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_line'});">LINEで予約する</a>
-          <a class="btn" href="#flow">診療の流れを見る</a>
+          <a class="btn" href="#faq">よくある質問を見る</a>
         </div>
 
         <p class="mini" style="margin-top:12px;">
@@ -450,7 +511,7 @@
     <div class="wrap">
       <div class="card" style="margin-bottom:14px;">
         <h2 class="sectionTitle">内科専門医が丁寧に説明します</h2>
-        <p class="sectionLead">担当医：グランエタニティ銀座クリニック　　医師　津坂憲政（慶応大学出身、内科専門医）</p>
+        <p class="sectionLead">担当医：グランエタニティ銀座クリニック　医師　津坂憲政（慶応大学出身、内科専門医）</p>
       </div>
 
       <div class="grid3">
@@ -479,7 +540,6 @@
       <div class="anchor"></div>
       <div class="card">
         <h2 class="sectionTitle">オンライン診療の流れ</h2>
-        <p class="sectionLead"></p>
 
         <div class="grid2" style="margin-top:12px;">
           <div class="steps">
@@ -580,66 +640,37 @@
     </div>
   </section>
 
+  <!-- REVIEWS -->
   <section style="padding:60px 20px;background:#f9fcff;">
-<div style="max-width:1000px;margin:auto;">
+    <div style="max-width:1000px;margin:auto;">
+      <h2 style="text-align:center;font-size:28px;margin-bottom:40px;">患者様の口コミ</h2>
 
-<h2 style="text-align:center;font-size:28px;margin-bottom:40px;">
-患者様の口コミ
-</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>オンライン診療がとても簡単でした。LINE予約してすぐ診察でき、マンジャロも翌日届きました。</p>
+          <b>30代女性</b>
+        </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>他のクリニックより価格が安かったので利用しました。説明も丁寧で安心できました。</p>
+          <b>40代女性</b>
+        </div>
 
-<div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-★★★★★ 
-<p>オンライン診療がとても簡単でした。LINE予約してすぐ診察でき、マンジャロも翌日届きました。</p>
-<b>30代女性</b>
-</div>
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>通院不要でマンジャロが処方されるのが便利。仕事が忙しいのでオンライン診療は助かります。</p>
+          <b>30代男性</b>
+        </div>
+      </div>
 
-<div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-★★★★★ 
-<p>他のクリニックより価格が安かったので利用しました。説明も丁寧で安心できました。</p>
-<b>40代女性</b>
-</div>
+      <div style="text-align:center;margin-top:28px;">
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'review_line'});">LINEで予約する</a>
+      </div>
+    </div>
+  </section>
 
-<div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
-★★★★★ 
-<p>通院不要でマンジャロが処方されるのが便利。仕事が忙しいのでオンライン診療は助かります。</p>
-<b>30代男性</b>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- FULL ETERNITY誘導 -->
-<section style="padding:50px 20px;background:#fffaf7;">
-  <div style="max-width:900px;margin:auto;padding:35px;border-radius:16px;border:1px solid #eadfd7;box-shadow:0 8px 24px rgba(0,0,0,0.06);text-align:center;">
-
-    <h2 style="font-size:26px;margin-bottom:18px;">
-      ダイエットとあわせて<br>
-      美容ケアも気になる方へ
-    </h2>
-
-    <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:16px;">
-      マンジャロによる体重管理をきっかけに、<br>
-      肌のコンディションや美容ケアについてご相談をいただくことがあります。
-    </p>
-
-    <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:24px;">
-      当院ではスキンケアをご希望の方へ、<br>
-      <strong>幹細胞上清液美容液「FULL ETERNITY」</strong>もご案内しています。
-    </p>
-
-    <a href="https://extl2.github.io/mounjaro_flow/full_eternity2_lp.html"
-       style="display:inline-block;padding:16px 36px;border-radius:999px;
-       background:#b3875a;color:white;text-decoration:none;
-       font-weight:bold;font-size:18px;">FULL ETERNITYを見る
-    </a>
-
-  </div>
-</section>
-  
   <!-- FAQ -->
   <section id="faq" class="faq">
     <div class="wrap">
@@ -676,17 +707,18 @@
           <summary>キャンセルできますか？</summary>
           <div class="muted">診察前のキャンセルは可能です。診察後・決済後のキャンセル／返金は原則できません（医薬品の性質上）。詳細は運用規約に従います。</div>
         </details>
+
         <section style="padding:40px 20px;">
-  <div style="max-width:1000px;margin:auto;">
-    <h2>マンジャロについて詳しく知りたい方へ</h2>
-    <ul>
-      <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-online.html">マンジャロオンライン診療とは？価格・処方方法・注意点を解説</a></li>
-      <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-yasui.html">マンジャロを安く始めたい方へ｜価格の見方・オンライン診療の選び方</a></li>
-      <li><a href="https://extl2.github.io/manjyaro_online/glp1-online.html">GLP-1オンライン診療とは？｜価格の見方・オンライン診療の選び方</a></li>
-      <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-hikaku.html">マンジャロ価格比較</a></li>
-    </ul>
-  </div>
-</section>
+          <div style="max-width:1000px;margin:auto;">
+            <h2>マンジャロについて詳しく知りたい方へ</h2>
+            <ul>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-online.html">マンジャロオンライン診療とは？価格・処方方法・注意点を解説</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-yasui.html">マンジャロを安く始めたい方へ｜価格の見方・オンライン診療の選び方</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/glp1-online.html">GLP-1オンライン診療とは？｜価格の見方・オンライン診療の選び方</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-hikaku.html">マンジャロ価格比較</a></li>
+            </ul>
+          </div>
+        </section>
 
         <div class="heroButtons" style="margin-top:14px;">
           <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'faq_line'});">LINEで予約する</a>
@@ -702,7 +734,7 @@
       <div class="ctaPanel">
         <div class="ctaText">
           <h3>まずはLINEから、気軽にご予約ください</h3>
-          <p></p>
+          <p>価格や流れを確認したら、そのままLINEで予約へ進めます。</p>
           <div class="heroButtons">
             <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'cta_line'});">LINEで予約する</a>
             <a class="btn" href="#price">料金を見る</a>
@@ -773,11 +805,38 @@
     </div>
   </section>
 
+  <!-- FULL ETERNITY誘導 -->
+  <section style="padding:50px 20px;background:#fffaf7;">
+    <div style="max-width:900px;margin:auto;padding:35px;border-radius:16px;border:1px solid #eadfd7;box-shadow:0 8px 24px rgba(0,0,0,0.06);text-align:center;">
+      <h2 style="font-size:26px;margin-bottom:18px;">
+        ダイエットとあわせて<br>
+        美容ケアも気になる方へ
+      </h2>
+
+      <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:16px;">
+        マンジャロによる体重管理をきっかけに、<br>
+        肌のコンディションや美容ケアについてご相談をいただくことがあります。
+      </p>
+
+      <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:24px;">
+        当院ではスキンケアをご希望の方へ、<br>
+        <strong>幹細胞上清液美容液「FULL ETERNITY」</strong>もご案内しています。
+      </p>
+
+      <a href="https://extl2.github.io/mounjaro_flow/full_eternity2_lp.html"
+         style="display:inline-block;padding:16px 36px;border-radius:999px;background:#b3875a;color:white;text-decoration:none;font-weight:bold;font-size:18px;">
+        FULL ETERNITYを見る
+      </a>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <div class="wrap foot">
     <div class="mini">
-      © <span id="y"></span> マンジャロオンライン外来｜中央区オンライン医療ダイエット<br>
-
+      © <span id="y"></span> マンジャロオンライン外来｜中央区オンライン医療ダイエット
+    </div>
+    <div class="tokushoLink">
+      <a href="tokusho.html">特定商取引法に基づく表示</a>
     </div>
   </div>
 
@@ -799,6 +858,3 @@
   </script>
 </body>
 </html>
-<div style="text-align:center; margin:40px 0 120px 0; position:relative; z-index:30;">
-  <a href="tokusho.html">特定商取引法に基づく表示</a>
-</div>
