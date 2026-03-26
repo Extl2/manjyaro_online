@@ -364,8 +364,76 @@
     .ctaIn .left{display:flex; flex-direction:column;}
     .anchor{position:relative; top:-80px;}
 
+
+    .heroAssure{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin:14px 0 10px;
+    }
+    .heroAssure .item{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:12px 10px;
+      text-align:center;
+      font-size:13px;
+      font-weight:800;
+      color:#42526a;
+      box-shadow:0 6px 18px rgba(64,86,124,.05);
+    }
+    .microTrust{
+      margin-top:12px;
+      display:grid;
+      gap:6px;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
+    .consultBox{
+      margin-top:16px;
+      padding:14px 16px;
+      border-radius:18px;
+      background:linear-gradient(135deg,#f7fff9,#ffffff 55%,#f2fbff);
+      border:1px solid rgba(6,199,85,.15);
+    }
+    .consultTitle{
+      font-size:14px;
+      font-weight:900;
+      color:#22415b;
+      margin-bottom:8px;
+    }
+    .consultList{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .consultList span{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--border);
+      font-size:12px;
+      font-weight:800;
+      color:#4a5a72;
+    }
+    .sectionBand{
+      margin:0 0 14px;
+      padding:14px 16px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#fff6fa,#f5fbff);
+      border:1px solid var(--border);
+    }
+    .sectionBand strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:15px;
+    }
+
     @media (max-width: 920px){
-      .heroGrid,.grid3,.grid2,.ctaPanel,.heroVisual{grid-template-columns:1fr}
+      .heroGrid,.grid3,.grid2,.ctaPanel,.heroVisual,.heroAssure{grid-template-columns:1fr}
       h1{font-size:30px}
       .heroTopPrice .big{font-size:30px}
       .priceRow{grid-template-columns:1fr}
@@ -390,7 +458,7 @@
         <a class="btn pastel" href="#price">料金</a>
         <a class="btn pastel" href="#flow">流れ</a>
         <a class="btn pastel" href="#faq">FAQ</a>
-        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'header_line'});">LINEで予約・相談する</a>
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'header_line'});">LINEで空き状況を確認する</a>
       </div>
     </div>
   </div>
@@ -408,16 +476,23 @@
           <div class="sub">税込・送料無料 / 全国配送 / LINE予約が最短</div>
         </div>
 
+        <div class="heroAssure">
+          <div class="item">医師が診察</div>
+          <div class="item">正規医薬品のみ</div>
+          <div class="item">来院不要</div>
+          <div class="item">全国配送</div>
+        </div>
+
         <div class="heroButtons heroButtonsTop" style="margin-top:0;">
   <a class="btn primary heroCta"
      href="https://lin.ee/nSBG5aT"
      target="_blank"
      rel="noopener"
      onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_main_line'});">
-    LINEで今すぐ予約する
+    LINEで空き状況を確認する
   </a>
 
-  <a class="btn" href="#flow">診療の流れを見る</a>
+  <a class="btn" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_sub_line'});">LINEで診察予約へ進む</a>
 
   <a class="btn pastel instaBtn"
      href="https://www.instagram.com/mounjaro_online_clinic/"
@@ -426,6 +501,12 @@
     最新情報はInstagram
   </a>
 </div>
+
+        <div class="microTrust">
+          <div>※ 友だち追加後、すぐに予約案内をご確認いただけます</div>
+          <div>※ まずは空き状況の確認やご相談のみでも可能です</div>
+          <div>※ 不要な場合はブロック可能です</div>
+        </div>
 
         <p class="lead" style="margin-top:14px;">
           医師が診察し、適応確認・副作用説明のうえ処方します。ご自宅へ冷蔵配送します。
@@ -452,13 +533,23 @@
         </div>
 
         <div class="heroButtons">
-          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_line'});">LINEで予約する</a>
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_line'});">LINEで空き状況を確認する</a>
           <a class="btn" href="#faq">よくある質問を見る</a>
         </div>
 
         <p class="mini" style="margin-top:12px;">
           ※ 自由診療です。保険診療ではありません。未成年の方はお受けできません。
         </p>
+
+        <div class="consultBox">
+          <div class="consultTitle">こんな方は、まずLINEでご相談ください</div>
+          <div class="consultList">
+            <span>初めてで不安</span>
+            <span>副作用が心配</span>
+            <span>自分が適応か知りたい</span>
+            <span>料金を確認してから決めたい</span>
+          </div>
+        </div>
       </div>
 
       <div class="heroCard sideCard">
@@ -555,6 +646,8 @@
       <div class="card">
         <h2 class="sectionTitle">オンライン診療の流れ</h2>
 
+        <div class="sectionBand"><strong>予約前の相談だけでも可能です</strong><span class="muted">まずはLINEで空き枠・料金・流れをご確認ください。納得してから予約へ進めます。</span></div>
+
         <div class="grid2" style="margin-top:12px;">
           <div class="steps">
             <div class="step">
@@ -602,7 +695,7 @@
         </div>
 
         <div class="heroButtons">
-          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'flow_line'});">LINEで予約する</a>
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'flow_line'});">LINEで空き状況を確認する</a>
           <a class="btn" href="#faq">よくある質問へ</a>
         </div>
 
@@ -680,7 +773,7 @@
       </div>
 
       <div style="text-align:center;margin-top:28px;">
-        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'review_line'});">LINEで予約する</a>
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'review_line'});">LINEで空き状況を確認する</a>
       </div>
     </div>
   </section>
@@ -735,7 +828,7 @@
         </section>
 
         <div class="heroButtons" style="margin-top:14px;">
-          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'faq_line'});">LINEで予約する</a>
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'faq_line'});">LINEで空き状況を確認する</a>
           <a class="btn" href="#clinic">クリニック情報へ</a>
         </div>
       </div>
@@ -747,10 +840,10 @@
     <div class="wrap">
       <div class="ctaPanel">
         <div class="ctaText">
-          <h3>まずはLINEから、気軽にご予約ください</h3>
-          <p>価格や流れを確認したら、そのままLINEで予約へ進めます。</p>
+          <h3>まずはLINEで、空き状況をご確認ください</h3>
+          <p>料金や流れを確認したうえで、そのままLINEで予約へ進めます。</p>
           <div class="heroButtons">
-            <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'cta_line'});">LINEで予約する</a>
+            <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'cta_line'});">LINEで空き状況を確認する</a>
             <a class="btn" href="#price">料金を見る</a>
           </div>
         </div>
@@ -859,10 +952,10 @@
     <div class="wrap ctaIn">
       <div class="left">
         <div class="txt">マンジャロ2.5mg 3,425円〜（税込・送料無料）</div>
-        <div class="sub">完全オンライン診療・全国配送</div>
+        <div class="sub">完全オンライン診療・ご相談のみでもOK</div>
       </div>
       <div>
-        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'sticky_line'});">LINEで予約する</a>
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'sticky_line'});">LINEで空き状況を確認する</a>
       </div>
     </div>
   </div>
